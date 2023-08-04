@@ -1,0 +1,58 @@
+<%- include('includes/header'); -%>
+    <%- include('includes/nav'); -%>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-2"></div>
+                <div class="col-lg-8 my-2 ">
+                    <h1 class="display-1 text-center">Login</h1>
+                    <p class="text-center lead">Faça login ou crie a sua conta</p>
+                    <div class="row">
+                        <div class="col-lg">
+                        </div>
+                        <%- include('includes/messages'); -%>
+
+                            <div class="col-lg-4 form-control-sm ">
+                                <h4>Cadastro</h4>
+                                <form action="/login/register" method="post">
+                                    <input type="hidden" name="_csrf" value=<%=csrfToken %>>
+                                    <div class="form-group my-3">
+                                        <label>Seu enderço de e-mail</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" placeholder="Digite o seu e-mail" name="email">
+                                    </div>
+                                    <div class="form-group my-3">
+                                        <label>Palavra-passe</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1"
+                                            placeholder="Digite a sua palavra-passe" name="password">
+                                    </div>
+                                    <button type="submit" class="btn my-1 btn-primary">Criar minha conta</button>
+                                </form>
+                            </div>
+                            <div class="col-lg">
+                            </div>
+                            <div class="col-lg-4 form-control-sm my-3">
+                                <h4>Login</h4>
+                                <form action="/login/Login" method="post">
+                                    <input type="hidden" name="_csrf" value=<%=csrfToken %>>
+                                    <div class="form-group my-3">
+                                        <label>Seu enderço de e-mail</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1"
+                                            aria-describedby="emailHelp" placeholder="Digite o seu e-mail" name="email">
+                                    </div>
+                                    <div class="form-group my-3">
+                                        <label>Palavra-passe</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1"
+                                            placeholder="Digite a sua palavra-passe" name="password">
+                                    </div>
+                                    <button type="submit" class="btn my-1 btn-primary">Entrar</button>
+                                </form>
+                            </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-2"></div>
+            </div>
+        </div>
+
+        <%- include('includes/footer'); -%>
